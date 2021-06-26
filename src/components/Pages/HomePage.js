@@ -25,9 +25,10 @@ const HomePage = () => {
         <div className="container">
             {blogs.map((blog) => (
                 <div class="card mb-3 border-0 my-5 blog-card">
-                    <img src={blogImage} height="300px" className="card-img-top" />
+                    <img src={blog.imgUrl} height="300px" className="card-img-top" />
                     <div class="card-body px-4">
                         <h2 class="card-title">{blog.title}</h2>
+                        <p>{blog.description}</p>
                         <Link to={`/blog/${blog._id}`} className="btn btn-primary my-3">See Details</Link>
                     </div>
                 </div>
